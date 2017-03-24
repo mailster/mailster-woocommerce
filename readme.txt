@@ -12,6 +12,11 @@ Author URI: https://mailster.co
 
 = Add your WooCommerce customers to your subscribers =
 
+== Screenshots ==
+
+1. Option Interface.
+2. Product List Meta Box
+
 == Changelog ==
 
 = Version 1.0 =
