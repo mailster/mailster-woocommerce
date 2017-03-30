@@ -3,7 +3,7 @@
 Plugin Name: Mailster for WooCommerce
 Plugin URI: http://rxa.li/mailster?utm_campaign=wporg&utm_source=Mailster+for+WooCommerce
 Description: add your WooCommerce customers to your Mailster lists
-Version: 1.0
+Version: 1.1
 Author: revaxarts.com
 Author URI: https://mailster.co
 Text Domain: mailster-woocommerce
@@ -12,7 +12,7 @@ License: GPLv2 or later
 
 class MailsterWooCommerce {
 
-	private $version = '1.0';
+	private $version = '1.1';
 	private $plugin_dir;
 	private $plugin_url;
 
@@ -57,7 +57,8 @@ class MailsterWooCommerce {
 
 		}
 
-		add_action( 'woocommerce_checkout_after_customer_details', array( &$this, 'checkbox' ) );
+		add_action( 'woocommerce_checkout_' . mailster_option( 'woocommerce_checkbox_pos', 'after_customer_details' ), array( &$this, 'checkbox' ) );
+
 		add_action( 'woocommerce_checkout_update_order_meta',  array( &$this, 'on_checkout' ) );
 
 		add_action( 'woocommerce_order_status_completed', array( &$this, 'on_completed' ) );
@@ -272,7 +273,7 @@ class MailsterWooCommerce {
 			if ( is_user_logged_in() && $subscriber = mailster( 'subscribers' )->get_by_wpid( get_current_user_id() ) ) {
 				echo '<div class="mailster-signup"><input id="wc_mailster_signup" name="mailster_signup" type="hidden" value="1"></div>';
 			} else {
-				echo '<div class="mailster-signup"><input id="wc_mailster_signup" name="mailster_signup" type="checkbox" ' . checked( mailster_option( 'woocommerce_checkbox' ), true, false ) . '> ' . mailster_option( 'woocommerce_label' ) . '</div>';
+				echo '<div class="mailster-signup"><label for="wc_mailster_signup" class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox"><input id="wc_mailster_signup" name="mailster_signup" type="checkbox" ' . checked( mailster_option( 'woocommerce_checkbox' ), true, false ) . '> ' . mailster_option( 'woocommerce_label' ) . '</label></div>';
 			}
 		}
 
@@ -366,6 +367,7 @@ class MailsterWooCommerce {
 				'woocommerce_action' => 'created',
 				'woocommerce_type' => 'checkbox',
 				'woocommerce_checkbox' => true,
+				'woocommerce_checkbox_pos' => 'after_customer_details',
 				'woocommerce_label' => __( 'Subscribe to our newsletter', 'mailster-woocommerce' ),
 				'woocommerce_templates' => array(),
 				'woocommerce-double-opt-in' => true,
