@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Mailster for WooCommerce
-Plugin URI: http://rxa.li/mailster?utm_campaign=wporg&utm_source=Mailster+for+WooCommerce
+Plugin URI: https://mailster.co/?utm_campaign=wporg&utm_source=Mailster+for+WooCommerce
 Description: add your WooCommerce customers to your Mailster lists
 Version: 1.1
-Author: revaxarts.com
+Author: EverPress
 Author URI: https://mailster.co
 Text Domain: mailster-woocommerce
 License: GPLv2 or later

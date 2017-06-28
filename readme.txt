@@ -1,18 +1,18 @@
 === Mailster for WooCommerce ===
 Contributors: everpress, revaxarts
-Tags: mailster, newsletter, email, revaxarts
+Tags: mailster, newsletter, ecommerce, leads
 Requires at least: 3.8
-Tested up to: 4.7.3
+Tested up to: 4.8
 Stable tag: 1.1
 License: GPLv2 or later
-Author: revaxarts
+Author: EverPress
 Author URI: https://mailster.co
 
 == Description ==
 
 = Add your WooCommerce customers to your Mailster subscriber lists =
 
-> This Plugin requires [Mailster Newsletter Plugin for WordPress](http://rxa.li/mailster?utm_campaign=wporg&utm_source=WooCommerce+for+Mailster)
+> This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=WooCommerce+for+Mailster)
 
 Read more about the add on on our [knowlege base](https://kb.mailster.co/mailster-and-woocommerce/).
 
