@@ -1,6 +1,6 @@
 <?php
 
-$templatefiles = mailster( 'templates' )->get_files( mymail_option( 'default_template' ) );
+$templatefiles = mailster( 'templates' )->get_files( mailster_option( 'default_template' ) );
 
 if ( isset( $templatefiles['index.html'] ) ) {
 	unset( $templatefiles['index.html'] );
@@ -51,6 +51,10 @@ $templates = mailster_option( 'woocommerce_templates', array() );
 			<option value="after_order_review" <?php selected( mailster_option( 'woocommerce_checkbox_pos' ), 'after_order_review' ); ?>><?php esc_html_e( 'after Order Review', 'mailster-woocommerce' ) ?></option>
 			<option value="before_customer_details" <?php selected( mailster_option( 'woocommerce_checkbox_pos' ), 'before_customer_details' ); ?>><?php esc_html_e( 'before Customer Details', 'mailster-woocommerce' ) ?></option>
 			<option value="after_customer_details" <?php selected( mailster_option( 'woocommerce_checkbox_pos' ), 'after_customer_details' ); ?>><?php esc_html_e( 'after Customer Details', 'mailster-woocommerce' ) ?></option>
+			<option value="before_checkout_registration_form" <?php selected( mailster_option( 'woocommerce_checkbox_pos' ), 'before_checkout_registration_form' ); ?>><?php esc_html_e( 'before Checkout Registration Form', 'mailster-woocommerce' ) ?></option>
+			<option value="after_checkout_registration_form" <?php selected( mailster_option( 'woocommerce_checkbox_pos' ), 'after_checkout_registration_form' ); ?>><?php esc_html_e( 'after Checkout Registration Form', 'mailster-woocommerce' ) ?></option>
+			<option value="before_checkout_billing_form" <?php selected( mailster_option( 'woocommerce_checkbox_pos' ), 'before_checkout_billing_form' ); ?>><?php esc_html_e( 'before Checkout Billing Form', 'mailster-woocommerce' ) ?></option>
+			<option value="after_checkout_billing_form" <?php selected( mailster_option( 'woocommerce_checkbox_pos' ), 'after_checkout_billing_form' ); ?>><?php esc_html_e( 'after Checkout Billing Form', 'mailster-woocommerce' ) ?></option>
 		</select>
 		</p>
 		</td>

@@ -2,8 +2,8 @@
 Contributors: everpress, revaxarts
 Tags: mailster, newsletter, ecommerce, leads
 Requires at least: 3.8
-Tested up to: 4.8
-Stable tag: 1.1
+Tested up to: 4.9
+Stable tag: 1.2
 License: GPLv2 or later
 Author: EverPress
 Author URI: https://mailster.co
@@ -14,7 +14,7 @@ Author URI: https://mailster.co
 
 > This Plugin requires [Mailster Newsletter Plugin for WordPress](https://mailster.co/?utm_campaign=wporg&utm_source=WooCommerce+for+Mailster)
 
-Read more about the add on on our [knowlege base](https://kb.mailster.co/mailster-and-woocommerce/).
+Read more about the add on on our [knowledge base](https://kb.mailster.co/mailster-and-woocommerce/).
 
 == Screenshots ==
 
@@ -23,6 +23,11 @@ Read more about the add on on our [knowlege base](https://kb.mailster.co/mailste
 3. Example Checkbox on Checkout
 
 == Changelog ==
+
+= Version 1.2 =
+
+* updated file structure
+* additional checkbox positions
 
 = Version 1.1 =
 
