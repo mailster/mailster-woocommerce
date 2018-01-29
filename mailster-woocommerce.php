@@ -3,14 +3,14 @@
 Plugin Name: Mailster for WooCommerce
 Plugin URI: https://mailster.co/?utm_campaign=wporg&utm_source=Mailster+for+WooCommerce
 Description: add your WooCommerce customers to your Mailster lists
-Version: 1.2
+Version: 1.3
 Author: EverPress
 Author URI: https://mailster.co
 Text Domain: mailster-woocommerce
-License: GPLv2 or later
+License: GPLv3 or later
 */
 
-define( 'MAILSTER_WOOCOMMERCE_VERSION', '1.2' );
+define( 'MAILSTER_WOOCOMMERCE_VERSION', '1.3' );
 define( 'MAILSTER_WOOCOMMERCE_REQUIRED_VERSION', '2.2.9' );
 define( 'MAILSTER_WOOCOMMERCE_FILE', __FILE__ );
 

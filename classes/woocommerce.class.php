@@ -233,7 +233,7 @@ class MailsterWooCommerce {
 				'firstname' => $firstname,
 				'lastname' => $lastname,
 				'email' => $email,
-				'referer' => sprintf( '<a href="post.php?post=%d&action=edit">%s #%d</a>', $order->id, __( 'Order', 'mailster-woocommerce' ), $order->id ),
+				'referer' => sprintf( '<a href="' . admin_url( 'post.php?post=%d&action=edit' ) . '">%s #%d</a>', $order->id, __( 'Order', 'mailster-woocommerce' ), $order->id ),
 				'status' => mailster_options( 'woocommerce-double-opt-in' ) ? 0 : 1,
 			);
 
