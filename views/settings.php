@@ -60,6 +60,10 @@ $templates = mailster_option( 'woocommerce_templates', array() );
 		</td>
 	</tr>
 	<tr valign="top">
+		<th scope="row"><?php esc_html_e( 'Skip for known Users', 'mailster-woocommerce' )?></th>
+		<td><label><input type="hidden" name="mailster_options[woocommerce-skip-user]" value="0"><input type="checkbox" name="mailster_options[woocommerce-skip-user]" value="1" <?php checked( mailster_option( 'woocommerce-skip-user' ) );?>> <?php esc_html_e( 'Hide checkbox for already registered users', 'mailster-woocommerce' )?></label></td>
+	</tr>
+	<tr valign="top">
 		<th scope="row"><?php esc_html_e( 'Checkbox Label', 'mailster-woocommerce' )?></th>
 		<td><p><input type="text" name="mailster_options[woocommerce_label]" value="<?php echo esc_attr( mailster_option( 'woocommerce_label' ) ) ?>" class="regular-text"></p></td>
 	</tr>

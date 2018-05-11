@@ -260,7 +260,7 @@ class MailsterWooCommerce {
 		}
 
 		if ( 'checkbox' == mailster_option( 'woocommerce_type' ) ) {
-			if ( is_user_logged_in() && $subscriber = mailster( 'subscribers' )->get_by_wpid( get_current_user_id() ) ) {
+			if ( mailster_option( 'woocommerce-skip-user' ) && is_user_logged_in() && $subscriber = mailster( 'subscribers' )->get_by_wpid( get_current_user_id() ) ) {
 				echo '<div class="mailster-signup"><input id="wc_mailster_signup" name="mailster_signup" type="hidden" value="1"></div>';
 			} else {
 				echo '<div class="mailster-signup"><label for="wc_mailster_signup" class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox"><input id="wc_mailster_signup" name="mailster_signup" type="checkbox" ' . checked( mailster_option( 'woocommerce_checkbox' ), true, false ) . '> ' . mailster_option( 'woocommerce_label' ) . '</label></div>';
@@ -359,7 +359,18 @@ class MailsterWooCommerce {
 				'woocommerce_checkbox' => false,
 				'woocommerce_checkbox_pos' => 'after_customer_details',
 				'woocommerce_label' => __( 'Subscribe to our newsletter', 'mailster-woocommerce' ),
-				'woocommerce_templates' => array(),
+				'woocommerce_templates' => array(
+					'new_order' => 0,
+					'cancelled_order' => 0,
+					'refunded_order' => 0,
+					'processing_order' => 0,
+					'completed_order' => 0,
+					'invoice' => 0,
+					'note' => 0,
+					'reset_password' => 0,
+					'new_account' => 0,
+				),
+				'woocommerce-skip-user' => true,
 				'woocommerce-double-opt-in' => true,
 			);
 

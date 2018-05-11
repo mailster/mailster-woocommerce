@@ -3,7 +3,7 @@ Contributors: everpress, revaxarts
 Tags: mailster, newsletter, ecommerce, leads
 Requires at least: 3.8
 Tested up to: 4.9
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 Author: EverPress
 Author URI: https://mailster.co
@@ -23,6 +23,10 @@ Read more about the add on on our [knowledge base](https://kb.mailster.co/mailst
 3. Example Checkbox on Checkout
 
 == Changelog ==
+
+= Version 1.4 =
+
+* new option to skip checkbox for registered users
 
 = Version 1.3 =
 
