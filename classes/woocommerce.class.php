@@ -104,7 +104,7 @@ class MailsterWooCommerce {
 	/**
 	 *
 	 *
-	 * @param unknown $settings
+	 * @param array $settings
 	 * @return unknown
 	 */
 	public function settings_tab( $settings ) {
@@ -209,12 +209,11 @@ class MailsterWooCommerce {
 		if ( ! isset( $order->billing_email ) ) {
 			return;
 		}
-
 		$default_lists = mailster_option( 'woocommerce_lists', array() );
 
-		$email = $order->billing_email;
-		$firstname = $order->billing_first_name;
-		$lastname = $order->billing_last_name;
+		$email = $order->get_billing_email();
+		$firstname = $order->get_billing_first_name();
+		$lastname = $order->get_billing_last_name();
 
 		foreach ( $order->get_items() as $item ) {
 
@@ -233,7 +232,7 @@ class MailsterWooCommerce {
 				'firstname' => $firstname,
 				'lastname' => $lastname,
 				'email' => $email,
-				'referer' => sprintf( '<a href="' . admin_url( 'post.php?post=%d&action=edit' ) . '">%s #%d</a>', $order->id, __( 'Order', 'mailster-woocommerce' ), $order->id ),
+				'referer' => sprintf( '<a href="' . admin_url( 'post.php?post=%d&action=edit' ) . '">%s #%d</a>', $order->get_id(), __( 'Order', 'mailster-woocommerce' ), $order->get_id() ),
 				'status' => mailster_options( 'woocommerce-double-opt-in' ) ? 0 : 1,
 			);
 
